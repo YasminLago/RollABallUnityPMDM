@@ -8,13 +8,11 @@ public class CameraController : MonoBehaviour {
     private Vector3 offset;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start() {
         offset = transform.position - player.transform.position;
     }
 
-    void LateUpdate()
-    {
+    void LateUpdate() {
         // A medida que movamos al jugador con el teclado la cámara se mueve a la nueva posición
         // alineada con el jugador
         transform.position = player.transform.position + offset;
